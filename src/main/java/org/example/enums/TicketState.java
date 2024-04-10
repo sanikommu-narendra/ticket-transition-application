@@ -1,2 +1,7 @@
-package org.example.enums;public enum TicketState {
+package org.example.enums;
+
+public enum TicketState {
+    ANALYSIS,
+    REVIEW,
+    DONE
 }
