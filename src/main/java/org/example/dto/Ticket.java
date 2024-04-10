@@ -1,16 +1,17 @@
 package org.example.dto;
 
-import org.example.enums.TicketState;
+import org.example.states.Analysis;
+import org.example.states.State;
 
 public class Ticket {
     private String description;
     private User createdBy;
-    private TicketState ticketState;
+    private State ticketState;
 
     public Ticket(String description, User createdBy) {
         this.description = description;
         this.createdBy = createdBy;
-        this.ticketState = TicketState.ANALYSIS; // initial state
+        this.ticketState = new Analysis(); // initial state
     }
 
     public String getDescription() {
@@ -29,11 +30,11 @@ public class Ticket {
         this.createdBy = createdBy;
     }
 
-    public TicketState getTicketState() {
+    public State getTicketState() {
         return ticketState;
     }
 
-    public void setTicketState(TicketState ticketState) {
+    public void setTicketState(State ticketState) {
         this.ticketState = ticketState;
     }
 }
